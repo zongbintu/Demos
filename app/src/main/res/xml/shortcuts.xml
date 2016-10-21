@@ -1,0 +1,19 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+  <shortcut
+      android:shortcutId="compose"
+      android:enabled="false"
+      android:icon="@drawable/ic_compose"
+      android:shortcutShortLabel="@string/compose_shortcut_short_label1"
+      android:shortcutLongLabel="@string/compose_shortcut_long_label1"
+      android:shortcutDisabledMessage="@string/compose_disabled_message1">
+    <intent
+        android:action="android.intent.action.VIEW"
+        android:targetPackage="com.tu.example"
+        android:targetClass="com.tu.example.TestActivity" />
+    <!-- If your shortcut is associated with multiple intents, include them
+         here. The last intent in the list is what the user sees when they
+         launch this shortcut. -->
+    <categories android:name="android.shortcut.conversation" />
+  </shortcut>
+  <!-- Specify more shortcuts here. -->
+</shortcuts>
