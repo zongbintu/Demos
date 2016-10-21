@@ -1,7 +1,7 @@
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
   <shortcut
       android:shortcutId="compose"
-      android:enabled="false"
+      android:enabled="true"
       android:icon="@drawable/ic_compose"
       android:shortcutShortLabel="@string/compose_shortcut_short_label1"
       android:shortcutLongLabel="@string/compose_shortcut_long_label1"
