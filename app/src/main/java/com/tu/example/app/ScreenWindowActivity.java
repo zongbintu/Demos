@@ -12,7 +12,7 @@ import com.tu.example.R;
 
 /**
  * 替代锁屏
- * @auther Tu enum@foxmail.com
+ * @author Tu enum@foxmail.com
  * @date 16/7/1
  */
 public class ScreenWindowActivity extends Activity {

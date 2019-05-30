@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.util.Log;
 
 /**
- * @auther Tu enum@foxmail.com
+ * @author Tu enum@foxmail.com
  * @date 16/8/4
  */
 public class DisableDeviceAdminReceiver extends DeviceAdminReceiver {

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @auther Tu enum@foxmail.com
+ * @author Tu enum@foxmail.com
  * @date 16/7/1
  */
 public interface MainContract {

@@ -1,7 +1,7 @@
 package com.tu.example.common;
 
 /**
- * @auther Tu enum@foxmail.com
+ * @author Tu enum@foxmail.com
  * @date 16/7/1
  */
 public class Constants {
