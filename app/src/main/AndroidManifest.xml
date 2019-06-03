@@ -2,9 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tu.example">
 
-  <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
-  <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+  <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
 
   <application
       android:allowBackup="true"
@@ -14,23 +25,23 @@
       android:theme="@style/AppTheme">
     <activity android:name=".mainlist.MainActivity">
       <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
+        <action android:name="android.intent.action.MAIN"/>
 
-        <category android:name="android.intent.category.DEFAULT" />
-        <category android:name="android.intent.category.LAUNCHER" />
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
 
       <meta-data
           android:name="android.app.shortcuts"
-          android:resource="@xml/shortcuts" />
+          android:resource="@xml/shortcuts"/>
     </activity>
     <activity
         android:name=".TestActivity"
         android:label="Test">
       <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
+        <action android:name="android.intent.action.MAIN"/>
 
-        <category android:name="android.intent.category.tu.SAMPLE_CODE" />
+        <category android:name="android.intent.category.tu.SAMPLE_CODE"/>
       </intent-filter>
     </activity>
     <activity
@@ -41,22 +52,31 @@
         android:taskAffinity=""
         android:theme="@android:style/Theme.Wallpaper.NoTitleBar">
       <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
+        <action android:name="android.intent.action.MAIN"/>
 
-        <category android:name="android.intent.category.tu.SAMPLE_CODE" />
+        <category android:name="android.intent.category.tu.SAMPLE_CODE"/>
       </intent-filter>
     </activity>
 
-    <service android:name=".app.ScreenService" />
+    <service android:name=".app.ScreenService"/>
+    <activity android:name=".app.InstallSilentActivity"
+        android:label="App/install silent">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.tu.SAMPLE_CODE"/>
+      </intent-filter>
+    </activity>
+
 
     <!-- hack can't uninstall app -->
     <activity
         android:name=".hacking.jail.DeviceAdminActivity"
         android:label="@string/hack_jail">
       <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
+        <action android:name="android.intent.action.MAIN"/>
 
-        <category android:name="android.intent.category.tu.SAMPLE_CODE" />
+        <category android:name="android.intent.category.tu.SAMPLE_CODE"/>
       </intent-filter>
     </activity>
 
@@ -66,23 +86,44 @@
         android:permission="android.permission.BIND_DEVICE_ADMIN">
       <meta-data
           android:name="android.app.device_admin"
-          android:resource="@xml/device_manager_policies" />
+          android:resource="@xml/device_manager_policies"/>
 
       <intent-filter>
 
         <!-- 此处必须设定该Action，不设定则无法启动设备管理器，之前版本可启动但看不到的bug已被修复 -->
-        <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+        <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
       </intent-filter>
     </receiver>
 
-    <activity android:name=".shortcut.ShortcutsActivity"
+    <activity
+        android:name=".shortcut.ShortcutsActivity"
         android:label="NEW/Shortcuts">
       <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
+        <action android:name="android.intent.action.MAIN"/>
 
-        <category android:name="android.intent.category.tu.SAMPLE_CODE" />
+        <category android:name="android.intent.category.tu.SAMPLE_CODE"/>
       </intent-filter>
     </activity>
+    <activity
+        android:name=".onrestore.OnRestoreActivity"
+        android:label="Bug/FIX CustomView OnRestore">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.tu.SAMPLE_CODE"/>
+      </intent-filter>
+    </activity>
+
+    <receiver android:name=".app.BootBroadcastReceiver">
+      <intent-filter>
+        <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+        <data android:scheme="package" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+      </intent-filter>
+    </receiver>
   </application>
 
 </manifest>

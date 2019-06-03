@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:state_selected="true">
+    <bitmap android:dither="true"
+        android:src="@drawable/ic_step_point_active"
+        android:tileMode="repeat"/>
+  </item>
+
+  <item>
+    <bitmap android:dither="true"
+        android:src="@drawable/ic_step_point_normal"
+        android:tileMode="repeat"/>
+  </item>
+</selector>

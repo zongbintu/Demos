@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity
   @Override public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(android.R.layout.list_content);
-    listView = (ListView) findViewById(android.R.id.list);
+    listView = findViewById(android.R.id.list);
     Intent intent = getIntent();
     String path = intent.getStringExtra(Constants.PATH);
 
