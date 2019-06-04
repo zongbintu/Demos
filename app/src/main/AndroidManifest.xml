@@ -5,24 +5,22 @@
   <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
   <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
   <uses-permission android:name="android.permission.WAKE_LOCK"/>
-
-
-  <uses-permission android:name="android.permission.INTERNET" />
-  <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
-  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-  <uses-permission android:name="android.permission.CAMERA" />
-  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.CAMERA"/>
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
   <application
       android:allowBackup="true"
       android:icon="@mipmap/ic_launcher"
       android:label="@string/app_name"
       android:supportsRtl="true"
-      android:theme="@style/AppTheme">
+      android:theme="@style/AppTheme"
+      >
     <activity android:name=".mainlist.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
@@ -59,17 +57,16 @@
     </activity>
 
     <service android:name=".app.ScreenService"/>
-    <activity android:name=".app.InstallSilentActivity"
+
+    <activity
+        android:name=".app.InstallSilentActivity"
         android:label="App/install silent">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
 
         <category android:name="android.intent.category.tu.SAMPLE_CODE"/>
       </intent-filter>
-    </activity>
-
-
-    <!-- hack can't uninstall app -->
+    </activity> <!-- hack can't uninstall app -->
     <activity
         android:name=".hacking.jail.DeviceAdminActivity"
         android:label="@string/hack_jail">
@@ -105,7 +102,7 @@
       </intent-filter>
     </activity>
     <activity
-        android:name=".onrestore.OnRestoreActivity"
+        android:name=".bug.OnRestoreActivity"
         android:label="Bug/FIX CustomView OnRestore">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
@@ -116,12 +113,12 @@
 
     <receiver android:name=".app.BootBroadcastReceiver">
       <intent-filter>
-        <action android:name="android.intent.action.PACKAGE_REPLACED" />
+        <action android:name="android.intent.action.PACKAGE_REPLACED"/>
 
-        <data android:scheme="package" />
+        <data android:scheme="package"/>
       </intent-filter>
       <intent-filter>
-        <action android:name="android.intent.action.BOOT_COMPLETED" />
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
       </intent-filter>
     </receiver>
   </application>

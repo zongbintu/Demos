@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="StepIndicatorView">
+    <attr name="stepsName" format="reference"></attr>
+    <attr name="stepTextSize" format="dimension"/>
+  </declare-styleable>
+</resources>

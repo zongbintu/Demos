@@ -3,4 +3,14 @@
   <string name="compose_shortcut_short_label1">short</string>
   <string name="compose_shortcut_long_label1">shortcut long</string>
   <string name="compose_disabled_message1">shortcut disabled</string>
+
+  <array name="steps_name">
+    <item>信息录入</item>
+    <item>身份证</item>
+    <item>人证对比</item>
+    <item>取房卡</item>
+  </array>
+
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

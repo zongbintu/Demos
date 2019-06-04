@@ -2,16 +2,19 @@
 
 buildscript {
   repositories {
+    mavenCentral()
     google()
     jcenter()
   }
   dependencies {
-    classpath 'com.android.tools.build:gradle:3.4.1'
+    classpath 'com.android.tools.build:gradle:3.2.1'
+    classpath 'com.jakewharton:butterknife-gradle-plugin:8.8.1'
   }
 }
 
 allprojects {
   repositories {
+    mavenCentral()
     google()
     jcenter()
   }

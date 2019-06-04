@@ -8,7 +8,8 @@ import android.widget.Toast;
 import com.tu.example.mainlist.MainActivity;
 
 /**
- * Created by guanchao.gao on 2018/1/16.
+ * @author Tu enum@foxmail.com
+ * @version 1.0 2018/1/6
  */
 
 public class BootBroadcastReceiver extends BroadcastReceiver {
