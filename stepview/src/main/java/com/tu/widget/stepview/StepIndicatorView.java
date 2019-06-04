@@ -162,15 +162,15 @@ public class StepIndicatorView extends LinearLayout {
   @Override protected Parcelable onSaveInstanceState() {
     super.onSaveInstanceState();
     Parcelable superState = super.onSaveInstanceState();
-    StepIndicatorViewX.SavedState savedState =
-        new StepIndicatorViewX.SavedState(superState, mCurrentStep, mSelectStep, mStepNames,
+    SavedState savedState =
+        new SavedState(superState, mCurrentStep, mSelectStep, mStepNames,
             mStepIcons);
     return savedState;
   }
 
   @CallSuper
   @Override protected void onRestoreInstanceState(Parcelable state) {
-    StepIndicatorViewX.SavedState ss = (StepIndicatorViewX.SavedState) state;
+    SavedState ss = (SavedState) state;
     super.onRestoreInstanceState(ss.getSuperState());
     mCurrentStep = ss.currentStep;
     mSelectStep = ss.selectedStep;

@@ -24,6 +24,7 @@ public class StepIndicatorViewX extends StepIndicatorView {
   }
 
   @Override protected Parcelable onSaveInstanceState() {
+    super.onSaveInstanceState();
     Bundle bundle = new Bundle();
     bundle.putInt("currentStep", mCurrentStep);
     bundle.putInt("selectStep", mSelectStep);
