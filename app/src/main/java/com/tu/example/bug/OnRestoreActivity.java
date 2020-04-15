@@ -4,12 +4,10 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import com.tu.example.R;
 import java.util.Random;
 
-public class OnRestoreActivity extends AppCompatActivity {
+public class OnRestoreActivity extends AppCompatActivity implements View.OnClickListener {
 
   StepFragment bundleFragment1, bundleFragment2, saveFragment1, saveFragment2;
 
@@ -17,11 +15,14 @@ public class OnRestoreActivity extends AppCompatActivity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_on_restore);
-    ButterKnife.bind(this);
+    findViewById(R.id.bundle1_btn).setOnClickListener(this);
+    findViewById(R.id.bundle2_btn).setOnClickListener(this);
+    findViewById(R.id.savedstate1_btn).setOnClickListener(this);
+    findViewById(R.id.savedstate2_btn).setOnClickListener(this);
   }
 
-  @OnClick({ R.id.bundle1_btn, R.id.bundle2_btn, R.id.savedstate1_btn, R.id.savedstate2_btn })
-  void onClick(View v) {
+  @Override
+  public void onClick(View v) {
     Fragment fragment = null;
     switch (v.getId()) {
       case R.id.bundle1_btn:
