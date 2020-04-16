@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JS调用移动端示例</title>
+    <script type="text/javascript">
+        function callMobile(){
+            document.location = "js://msxf?arg1=111&arg2=222";
+        }
+
+         //Android调用该方法
+        function callJS(data){
+            alert(data);
+        }
+        function init( data){
+            alert(JSON.stringify(data));
+        }
+function nextPage(){
+document.location="http://blog.520wa.com";
+}
+  function getToken(){
+    var token = android.getToken();
+    alert(token);
+    alert(JSON.parse(token).secretKey);
+  }
+    </script>
+</head>
+<body>
+<button type="button" onclick="callMobile()">调用移动端</button><br/>
+<button type="button" onclick="nextPage()">跳转博客</button>
+<button type="button" onclick="getToken()">JS获取参数</button>
+</body>
+</html>
+<script>
+<!--function addWaterMarker(str){-->
+<!--var can = document.createElement('canvas');-->
+<!--var body = document.body;-->
+<!--body.appendChild(can);-->
+<!--can.width=400; //画布的宽-->
+<!--can.height=200;//画布的高度-->
+<!--can.style.display='none';-->
+<!--var cans = can.getContext('2d');-->
+<!--cans.rotate(-20*Math.PI/180); //画布里面文字的旋转角度-->
+<!--cans.font = "16px Microsoft JhengHei"; //画布里面文字的字体-->
+<!--cans.fillStyle = "rgba(17, 17, 17, 0.50)";//画布里面文字的颜色-->
+<!--cans.textAlign = 'left'; //画布里面文字的水平位置-->
+<!--cans.textBaseline = 'Middle'; //画布里面文字的垂直位置-->
+<!--cans.fillText('str',can.width/3,can.height/2); //画布里面文字的间距比例-->
+<!--body.style.backgroundImage="url("+can.toDataURL("image/png")+")"; //把画布插入到body中-->
+<!--}-->
+//调用这个方法即可
+<!--addWaterMarker("水印");-->
+
+
+
+<!--function GetWaterMarked(targetStr ) {-->
+
+<!--if(document.getElementById("waterMark") != null)-->
+
+<!--return;-->
+
+<!--var m = "waterMark";-->
+
+<!--var newMark = document.createElement("div");-->
+
+<!--newMark.id = m;-->
+
+<!--newMark.style.position = "absolute";-->
+
+<!--newMark.style.zIndex = "9527";-->
+
+<!--newMark.style.top = "0px";-->
+
+<!--newMark.style.left = "0px";-->
+
+<!--newMark.style.width = "800px";-->
+<!--newMark.style.height = "400px";-->
+
+
+<!--var can = document.createElement('canvas');-->
+<!--var body = document.body;-->
+<!--body.appendChild(can);-->
+<!--can.width=400; //画布的宽-->
+<!--can.height=200;//画布的高度-->
+<!--can.style.display='none';-->
+<!--var cans = can.getContext('2d');-->
+<!--cans.rotate(-20*Math.PI/180); //画布里面文字的旋转角度-->
+<!--cans.font = "16px Microsoft JhengHei"; //画布里面文字的字体-->
+<!--cans.fillStyle = "rgba(17, 17, 17, 0.50)";//画布里面文字的颜色-->
+<!--cans.textAlign = 'left'; //画布里面文字的水平位置-->
+<!--cans.textBaseline = 'Middle'; //画布里面文字的垂直位置-->
+<!--cans.fillText('str',can.width/3,can.height/2); //画布里面文字的间距比例-->
+<!--&lt;!&ndash;body.style.backgroundImage="url("+can.toDataURL("image/png")+")"; //把画布插入到body中&ndash;&gt;-->
+
+<!--newMark.style.backgroundImage = "url("+can.toDataURL("image/png")+")";-->
+
+<!--newMark.style.filter = "alpha(opacity=50)";-->
+
+<!--document.body.appendChild(newMark);-->
+<!--}-->
+<!--GetWaterMarked('xxada');-->
+</script>

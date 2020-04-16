@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<WebView
+    android:id="@+id/webview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".watermark.WatermarkWebViewActivity"
+    />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+    android:text="加载完网页后插入javascript改变html以达到添加水印目的\n方法一：为body添加背景，有可能会被内容及背景覆盖\n方法二：为html插入div当作水印，不会被覆盖，但是有可能影响点击事件（给水印层添加样式pointer-events: none;）"
+    />
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:id="@+id/url_et"
+    android:hint="input your url"
+    android:text="http://blog.520wa.com"
+    />
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/go_div_btn"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/url_et"
+      android:text="go and add watermark div"
+      />
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/go_body_btn"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/go_div_btn"
+      android:text="go and add watermark body background"
+      />
+</android.support.constraint.ConstraintLayout>

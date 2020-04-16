@@ -10,7 +10,8 @@
     <item>人证对比</item>
     <item>取房卡</item>
   </array>
-
+  <string name="label_watermark">水印/View背景水印</string>
+  <string name="label_watermark_webview">水印/WebView背景水印</string>
   <!-- TODO: Remove or change this placeholder text -->
   <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
